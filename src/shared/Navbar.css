@@ -1,0 +1,237 @@
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    height: 60px;
+    background-color: #b2c1a2;
+    border-bottom: 1px solid #ccc;
+    padding: 0 1rem;
+}
+
+.nav-left {
+    display: flex;
+    align-items: stretch;
+}
+
+/* Brand Title -> Logo */
+.brand-title {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--text-color);
+    margin-right: 1rem;
+}
+
+.main-links {
+    display: flex;
+    align-items: stretch;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 1.5rem;
+}
+
+.main-links li {
+    display: flex;
+    align-items: stretch;
+}
+
+.main-links li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0 1rem;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 3px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size :1.15rem;
+}
+
+.main-links li a:hover {
+    background-color: #789867;
+    color: #fff;
+}
+
+/* Active/Selected styling */
+.main-links li a.active {
+    background-color: var(--background-color);
+    color: #000;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.nav-right {
+    display: flex;
+    align-items: stretch;
+    margin-left: auto;
+}
+
+.login-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0 1rem;
+    margin-right: 1rem;
+    font-weight: bold;
+    /*color: #789867; */
+    text-decoration: none;
+    border-radius: 3px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #789867;
+    color: #fff;
+}
+
+.login-button.active {
+    background-color: #ddd;
+    color: #000;
+}
+
+/* The hamburger toggle icon (for mobile only) */
+.toggle-button {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 40px;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+}
+
+.toggle-button:focus {
+    outline: none;
+}
+
+
+.dropdown {
+    display: none;
+    width: 100%;
+    padding: 0 1rem;
+}
+
+/* The list of links in the dropdown */
+.dropdown ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+/* Each dropdown link spans the full width */
+.dropdown ul li a {
+    display: block;
+    padding: 0.75rem 0;
+    text-decoration: none;
+    color: var(--text-color);
+    border-top: 1px solid #ccc;
+    border-radius: 3px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover/Active for dropdown links */
+.dropdown ul li a:hover {
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+.dropdown ul li a.active {
+    background-color: #ddd;
+    color: #000;
+}
+
+.dropdown.active {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+
+    .main-links {
+        display: none;
+    }
+
+    .login-button {
+        display: none;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar {
+        height: auto;
+    }
+
+    .brand-title {
+        margin-right: 1rem;
+    }
+}
+
+/* Hamburger icon styling */
+.toggle-button {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  height: 24px;
+  width: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: #333;
+  margin: 3px 0;
+  border-radius: 2px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .main-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #ded1bc;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 10;
+    padding: 0;
+    margin: 0;
+  }
+  .main-links.active {
+    display: flex;
+  }
+  .toggle-button {
+    display: flex;
+    position: absolute;      
+    right: 1rem;             
+    top: 1rem;               
+    z-index: 20;             
+    margin-left: 0;          
+  }
+  .nav-right {
+    position: static;        
+    right: auto;
+    top: auto;
+  }
+}
