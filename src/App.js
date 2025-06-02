@@ -6,7 +6,7 @@ import Footer from './shared/Footer';
 import MenuPage from './pages/MenuPage';
 import DreamCup from './pages/DreamCup';
 //import Meny from './components/menypage/MenyPage';
-//import Login from './pages/Login';
+import Login from './pages/Login';
 //import AdminDash from './admindash/Admindash';
 //import Drommekoppen from './pages/Drommekoppen';
 
@@ -22,9 +22,9 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/meny" element={<MenuPage />} />
         <Route path="/drommekoppen" element={<DreamCup />} />
-        {/*<Route path="/login" element={<Login />} />
-        <Route path="/admindash" element={<AdminDash />} /> *}
-        {/*         <Route path="/animasjontester" element={<AnimasjonTester />} /> */}
+        <Route path="/login" element={<Login />} />
+       {/* <Route path="/admindash" element={<AdminDash />} /> 
+               <Route path="/animasjontester" element={<AnimasjonTester />} /> */}
       </Routes>
       
       <Footer /> 
