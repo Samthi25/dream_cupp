@@ -23,7 +23,7 @@ const InfoSection = () => (
     </div>
     <div className="info-col">
       <img
-        src={process.env.PUBLIC_URL + "/images/image1.jpg"}
+        src={process.env.PUBLIC_URL + "/images/image7.jpg"}
         alt="Kafé interiør"
         className="info-card-img-outside"
       />

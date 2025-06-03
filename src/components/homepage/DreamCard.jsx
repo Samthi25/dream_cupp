@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 const DreamCupCard = () => (
   <div className="info-grid">
     <div className ="info-col">
-      <img src={process.env.PUBLIC_URL + "/images/image1.jpg"}
+      <img src={process.env.PUBLIC_URL + "/images/image8.jpg"}
       alt="location" className="info-card-img-outside" />
     </div>
     <div className="info-col">
